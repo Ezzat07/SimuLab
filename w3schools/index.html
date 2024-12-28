@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <style>
+            
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: content-box;
+            }
+
+            /*---------------------LINKS-------------------*/
+            a:link{
+                text-decoration: none;
+                color:white;
+            }
+            /*---------------------TOP-------------------*/
+            div.top{
+                margin:10px 20px;
+            }
+        
+            .web-link{
+                padding:5px 5px;
+                font-size: 37px;
+                font-family: georgia, sans-serif;
+            }
+        
+            .byword p{
+                padding:5px 5px;
+                font-size: 15px;
+                font-family: sans-serif;
+                letter-spacing:3px;
+                padding-right: 20px;
+            }
+            
+            #domain{
+                color:#555555;
+            }
+            #com{
+                color:#4CAF50;
+            }
+
+            @media only screen and (max-width:992px){
+               
+                .web-link{
+                  text-align: center;
+                }
+                
+                div.top .byword p{
+                    text-align: center;
+                }
+            }
+            @media screen and (min-width:992px){
+                .top .web-link{
+                    float: left;
+                    clear: right;
+                }
+
+                .top .byword{
+                    float: right;
+                }
+            }
+            @media only screen and (max-width:600px){
+                div.byword{
+                    display: none;
+                }
+            }
+
+            /*---------------------NAVIGATION-------------------*/
+
+             .nav{
+                clear:both;
+                width:100%;
+                height: 45px;
+                background-color: #52ba55;
+             }
+             div.nav ul li{
+                display: inline-block;
+                width:auto;
+                height: 30px;
+                text-align: center;
+                padding:5px 15px;
+                padding-top:10px;
+                font-size: 18px;
+                font-family: sans-serif;
+             }
+
+             div.nav ul li:hover{
+                background-color: #555555;
+             }
+
+        </style>
+    </head>
+    <body>
+
+        <!-- Layouts -->
+        <div class="container">
+            <div class="top">
+                <div class="web-link"><a href="www.w3schools.com"><span id="domain">W3Schools</span><span id="com">.com</span></a></div>
+                <div class="byword"><p>THE WORLD'S LARGEST WEB DEVELOPER SITE</p></div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">|||</a></li>
+                    <li><a href="https://www.w3schools.com/index">Home</a></li>
+                    <li><a href="https://www.w3schools.com/html/default.html">HTML</a></li>
+                    <li><a href="https://www.w3schools.com/css/default.html">CSS</a></li>
+                    <li><a href="https://www.w3schools.com/js/default.html">JAVASCRIPT</a></li>
+                    <li><a href="https://www.w3schools.com/java/default.html">JAVA</a></li>
+                    <li><a href="https://www.w3schools.com/python/default.html">PYTHON</a></li>
+                    <li><a href="https://www.w3schools.com/cpp/default.html">C++</a></li>
+                    <li><a href="#">More</a></li>
+                </ul>
+            </div>
+            <div class="rsidebar">
+
+            </div>
+            <div class="content">
+
+            </div>
+            <div class="lsidebar">
+
+            </div>
+        </div>
+    </body>
+</html>
