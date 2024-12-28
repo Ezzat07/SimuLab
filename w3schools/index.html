@@ -13,9 +13,16 @@
                 text-decoration: none;
                 color:white;
             }
+            a:visited{
+                color:white;
+            }
+            a:active{
+                color:white;
+            }
             /*---------------------TOP-------------------*/
             div.top{
                 margin:10px 20px;
+                margin-bottom:0;
             }
         
             .web-link{
@@ -48,6 +55,9 @@
                 div.top .byword p{
                     text-align: center;
                 }
+                .rside-bar{
+                    display: none;
+                }
             }
             @media screen and (min-width:992px){
                 .top .web-link{
@@ -58,35 +68,142 @@
                 .top .byword{
                     float: right;
                 }
+
+                .nav ul li.sidebar-btn{
+                    display: none;
+                }
+                .rside-bar{
+                    display: block;
+                }
+               
             }
             @media only screen and (max-width:600px){
                 div.byword{
                     display: none;
                 }
+                
+            }
+            /*---------------------NAVIGATION-tabs-------------------*/
+
+            .nav-top{
+                clear:both;
+                width:100%;
+                min-width: 200px;
+                overflow: hidden;
+            }
+            .nav-top #logo{
+                float: left;
+            }
+            
+            .nav-tabs ul li{
+                display: inline-block;
+                width: 100px;
+                height: 20px;
+                text-align: center;
+                padding:20px 10px;
+                margin-right:-4px;
+                font-size: 18px;
+                font-family: sans-serif;
+            }
+            .nav-tabs ul li a{
+                color:black;
+            }
+            .nav-tabs ul li:hover{
+                background-color:#4CAF50;
+            }
+            .nav-tabs ul li:hover a{
+                color:white;
             }
 
+            .tabs{
+                float:left;
+            }
+            .search{
+                float:left;
+                width:200px;
+                height: 18px;
+                padding:20px 10px;
+                position:relative;
+            }
+
+            .search-content{
+                height: 10px;
+                padding:10px 10px;
+                margin-top:-5px;
+                width: 180px;
+                border-radius: 30px;
+            }
+
+            input[type=text]{
+                border:1px solid black;
+                border-radius: 15px;
+                padding-left:10px;
+                margin-left:-10px;
+                width:100%;
+                height: 30px;
+                margin-top:-10px;
+            }
+            input:focus{
+                border:1px solid #555555;
+            }
+
+            .icon{
+                position: absolute;
+                right:30px;
+                top:20px;
+                color:red;
+            }
+
+            .theme{
+                float: left;
+                padding: 10px 10px;
+                font-size: 20px;
+            }
+            .theme button{
+                width:30px;
+                height: 30px;
+            }
+
+            .auth{
+                float: right;
+                width: 100px;
+                padding:10px 10px;
+                border:1px solid red;
+            }
+            .auth a{
+                color:#282a35;
+            }
+            .login{
+
+            }
+            
             /*---------------------NAVIGATION-------------------*/
 
              .nav{
                 clear:both;
                 width:100%;
-                height: 45px;
-                background-color: #52ba55;
+                min-width: 400px;
+                overflow: hidden;
+                height: 37px;
+                background-color: #282a35;
+                position: fixed;
+                max-width: 2000px;
              }
              div.nav ul li{
                 display: inline-block;
                 width:auto;
-                height: 30px;
+                height: 20px;
                 text-align: center;
-                padding:5px 15px;
+                padding:5px 10px;
                 padding-top:10px;
                 font-size: 18px;
                 font-family: sans-serif;
              }
 
              div.nav ul li:hover{
-                background-color: #555555;
+                background-color: black;
              }
+           
 
         </style>
     </head>
@@ -97,10 +214,35 @@
             <div class="top">
                 <div class="web-link"><a href="www.w3schools.com"><span id="domain">W3Schools</span><span id="com">.com</span></a></div>
                 <div class="byword"><p>THE WORLD'S LARGEST WEB DEVELOPER SITE</p></div>
+                <div class="nav-top">
+                    <a id="logo" href="https://w3schools.com">
+                        <img src="images/logo.png" width="50" height="50">
+                    </a>
+                    <div class="nav-tabs">
+                        <ul class="tabs">
+                            <li><a href="#">Tutorials</a></li>
+                            <li><a href="#">Exercies</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Certificates</a></li>
+                        </ul>
+                        <div class="search">
+                            <div class="search-content">
+                                <input type="text" placeholder="Search..." id="s">
+                                <span class="icon">icon</span>
+                            </div>
+                        </div>
+                        <div class="theme">
+                            <button>Dark</button>
+                        </div>
+                        <div class="auth">
+                            <a href="#" class="login">Login</a> / <a href="#" class="signin">Signin</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="nav">
                 <ul>
-                    <li><a href="#">|||</a></li>
+                    <li class="sidebar-btn"><a href="#" >|||</a></li>
                     <li><a href="https://www.w3schools.com/index">Home</a></li>
                     <li><a href="https://www.w3schools.com/html/default.html">HTML</a></li>
                     <li><a href="https://www.w3schools.com/css/default.html">CSS</a></li>
@@ -109,6 +251,19 @@
                     <li><a href="https://www.w3schools.com/python/default.html">PYTHON</a></li>
                     <li><a href="https://www.w3schools.com/cpp/default.html">C++</a></li>
                     <li><a href="#">More</a></li>
+                    <li><a href="https://www.w3schools.com/index">Home</a></li>
+                    <li><a href="https://www.w3schools.com/html/default.html">HTML</a></li>
+                    <li><a href="https://www.w3schools.com/css/default.html">CSS</a></li>
+                    <li><a href="https://www.w3schools.com/js/default.html">JAVASCRIPT</a></li>
+                    <li><a href="https://www.w3schools.com/index">Home</a></li>
+                    <li><a href="https://www.w3schools.com/html/default.html">HTML</a></li>
+                    <li><a href="https://www.w3schools.com/index">Home</a></li>
+                    <li><a href="https://www.w3schools.com/html/default.html">HTML</a></li>
+                    <li><a href="https://www.w3schools.com/css/default.html">CSS</a></li>
+                    <li><a href="https://www.w3schools.com/js/default.html">JAVASCRIPT</a></li>
+                    <li><a href="https://www.w3schools.com/index">Home</a></li>
+                    <li><a href="https://www.w3schools.com/html/default.html">HTML</a></li>
+                
                 </ul>
             </div>
             <div class="rsidebar">
